@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EPS Wolfram</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+        <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <!--BOOTSTRAP-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- JQuery and Pooper.js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+    
+    
+</head>
+
+<body class="bodyLogin">
+    <header id="main-header">
+        <a id="logo-header" href="index.html">
+            <img src="img/logo.jpg" width="200px">
+        </a>
+        <!-- / #logo-header -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="SobreNosotros.html">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="EpsCitas.html">EPS en linea</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- / nav -->
+    </header>
+    <!--ocupa el 100%-->
+
+        <div class="container">
+
+            <div class="login-form col-md-4 offset-md-4">
+
+                <h1 class="title">EPS en linea</h1>
+            <form  class="was-validated">
+                    <div class="form-group">
+
+                        <input type="number" class="form-control" name="usuario" max="999999999999999" min="0" id="user" placeholder="Cedula" autofocus="" required/>
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="password" class="form-control" name="contraseña"  id="password"  placeholder="Contraseña" required />
+                    </div>
+                <div class="form-group">
+                    <select class="custom-select" id="selectUser" required >
+                        <option value="">Tipo de ingreso:</option>
+                        <option value="1">Doctor</option>
+                        <option value="2">Secretaria</option>
+                        <option value="3">Admin</option>
+                    </select>
+
+                </div>
+              
+                    <button type="button" class="btn btn-primary btn block" onclick="loguear()">Ingresar</button>
+
+            </form>
+
+            </div>
+        </div>
+        <footer id="main-footer">
+            <p>© 2018 Stark Industries</p>
+        </footer>
+        <script src="js/Login.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        
+</body>
+
+</html>

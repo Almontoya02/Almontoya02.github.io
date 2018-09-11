@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EPS Wolfram</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <!--BOOTSTRAP-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- JQuery and Pooper.js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/Citas.js"></script>
+
+    <style>
+        #confirmUpdate{
+                display:none
+            }
+     </style>
+
+</head>
+
+<body>
+    <header id="main-header">
+        <a id="logo-header" href="index.html">
+            <img src="img/logo.jpg" width="200px">
+        </a> <!-- / #logo-header -->
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="EpsLinea.html">EPS en linea</a></li>
+            </ul>
+        </nav><!-- / nav -->
+    </header>
+
+    <!--ocupa el 100%-->
+    <div class="contenedorFormCitas">
+        <div class="was-validated" required>
+
+            <h1>Citas</h1>
+           
+            <form id="formCitas">
+
+                    <div class="form-group row">
+                            <div class="col-md-4 mb-3">
+                                    <label>Cedula</label>
+                                <input type="number" class="form-control" id="cedulaPaciente" required>
+                            </div>
+                        </div>
+
+                <div class="form-group row">
+                    <div class="col-md-4 mb-3">
+                        <label>Fecha</label>
+                        <input type="date" class="form-control" id="fechaCita" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-4 mb-3">
+                        <label>Hora</label>
+                        <input type="time" class="form-control" id="horaCita"required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-4 mb-3">
+                            <label>Doctor</label>
+                        <select name="selecionarDoctor" id="selectDoctor" class="form-control" required>
+                            <option value="">Seleccionar doctor</option>
+                            <option value="Alfredo R.">Alfredo R.</option>
+                            <option value="Alejandro M.">Alejandro M.</option>
+                            <option value="Yesid Z.">Yesid Z.</option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </div>
+                </div>
+
+            
+                    <div>
+                        <button type="submit"  id="crearC" class="btn btn-primary">Agendar cita</button>
+                    </div>
+                
+            </form>
+
+           
+            
+        </div>
+        <hr>
+        <div class="Ctabla">
+                <table id="tblList" class="table table-bordered"></table>
+        </div>
+    
+    </div>
+
+    
+    
+
+    <footer id="main-footer">
+        <p>© 2018 Stark Industries</p>
+    </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
