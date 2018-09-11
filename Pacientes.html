@@ -59,7 +59,8 @@
                 <div class="col-md-4 mb-3">
                     <label for="nombreP">Nombre</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="nombreP" placeholder="Nombre" aria-describedby="inputGroupPrepend" required>
+                        <input type="text" class="form-control" id="nombreP" placeholder="Nombre" aria-describedby="inputGroupPrepend"
+                            required>
 
                     </div>
                 </div>
@@ -102,12 +103,28 @@
                 </div>
             </div>
             <div>
-                <button type="submit" class="btn btn-primary" id="crearP" type="submit" onclick="agregar()">Guardar</button>
+                <button class="btn btn-primary" id="crearP" type="button" >Guardar</button>
             </div>
         </form>
         <hr>
         <div class="container">
-                <table id="tblList" class="table table-bordered"></table>
+            <table id="tblList" class="table table-bordered">
+
+                <thead>
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Contraseña</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="PacientesC">
+                </tbody >
+            </table>
         </div>
 
     </div>
@@ -118,7 +135,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-
+    <script src="js/Pacientes.js"></script>
 </body>
 
 </html>

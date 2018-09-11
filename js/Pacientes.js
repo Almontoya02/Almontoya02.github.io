@@ -1,13 +1,125 @@
+var app = new function () {
+
+  var operacion = "C"
+
+  var pacientes = [{
+
+    cedula: "12345",
+    nombre: "Alejandro",
+    apellidos: "Montoya",
+    contraseña: "789",
+    telefono: "4568",
+    direccion: "Medellín",
+    correo: "almontoya02@outlook.com"
+
+  },
+  {
+    cedula: "9876",
+    nombre: "Yesid",
+    apellidos: "Zapata",
+    contraseña: "123",
+    telefono: "4568",
+    direccion: "Medellín",
+    correo: "yesidz@hotmail.com"
+
+  }
+  ]
+
+  addPaciente = function (nombre, apellidos, cedula, contraseña, telefono, direccion, correo) {
+    var Pacientes = {
+
+      cedula: cedula,
+      nombre: nombre,
+      apellidos: apellidos,
+      contraseña: contraseña,
+      telefono: telefono,
+      direccion: direccion,
+      correo: correo
+
+    }
+    pacientes.push(Pacientes)
+  }
+  ingresarPacientes = function () {
+    if(operacion === 'C'){
+    var cedula = $("#ide").val()
+    var nombre = document.getElementById('nombreP').value
+    var apellidos = document.getElementById('apellidosP').value
+    var contrasena = document.getElementById('contraseñaP').value
+    var telefono = document.getElementById('telefonoP').value
+    var direccion = document.getElementById('direccionP').value
+    var correo = document.getElementById('correoP').value
+    console.log(cedula)
+    addPaciente(nombre, apellidos, cedula, contrasena, telefono, direccion, correo);
+    cargarPacientes();
+    }
+    else{
+      editPaciente();
+    }
+  }
+  
+  $(".btnEdit").bind("click", function () {
+
+    $("#ide").val(pacientes[posicion].cedula);
+    $("#nombreP").val(pacientes[posicion].nombre);
+    $("#apellidosP").val(pacientes[posicion].apellidos);
+    $("#contraseñaP").val(pacientes[posicion].contraseña);
+    $("#telefonoP").val(pacientes[posicion].telefono);
+    $("#direccionP").val(pacientes[posicion].direccion);
+    $("#correoP").val(pacientes[posicion].correo);
+    $("#ide").attr("readonly", "readonly");
+    $("#nombreP").attr("readonly", "readonly");
+    $("#apellidosP").attr("readonly", "readonly");
+
+  });
+  $("#crearP").bind("click", function () {
+    if (operacion === "C")
+        return ingresarPacientes();
+    else
+        return Edit();
+  }); 
+
+
+
+
+  cargarPacientes = function () {
+
+    var data = '';
+    for (var i = 0; i < pacientes.length; i++) {
+      data += '<tr>'
+      data += "<td>" + pacientes[i].cedula + "</td>"
+      data += "<td>" + pacientes[i].nombre + "</td>"
+      data +="<td>" + pacientes[i].apellidos + "</td>" 
+      data +=  "<td>" + pacientes[i].contraseña + "</td>" 
+      data +=  "<td>" + pacientes[i].telefono + "</td>" 
+      data +=  "<td>" + pacientes[i].direccion + "</td>" 
+      data += "<td>" + pacientes[i].correo + "</td>" 
+      data +=  "<td><img src='img/edit.png' " + i + "' class='btnEdit'/>&nbsp &nbsp<img src='img/delete.png'" + i + "' class='btnDelete'/></td>" 
+      data +=  "</tr>"
+    
+    }
+    document.getElementById('PacientesC').innerHTML = data
+  }
+
+}
+
+
+
+
+
+
+
+
 /**
+ * con variable local pero no sirve al montarlo a la web
  * la funcion con el signo ($) hace que sea mas facil el acceso a los html, sin necesidad de mucho codigo
- */
+ 
 
 $(function () {
   var operation = "C";
   var selected_index = -1;
   /**
    * Esta variable permite que los datos de la tabla no se borren haciendo el almacenamiento localmente en el navegador
-   */
+  
   var tblPacientes = localStorage.getItem("tblPacientes"); 
   tblPacientes = JSON.parse(tblPacientes); 
   if (tblPacientes === null)
@@ -98,7 +210,7 @@ $(function () {
   }
   /*si la operacion es C se llama el metodo Create haciendo que el boton crearP agregue un nuevo usuario,
   * sino ese boton llama la función Edit y actualiza la informacion del paciente
-  */
+
   $("#crearP").bind("click", function () {
     if (operation === "C")
         return Create();
@@ -135,4 +247,4 @@ $(function () {
   });
 });
 
-
+*/

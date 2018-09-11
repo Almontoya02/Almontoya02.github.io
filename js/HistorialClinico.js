@@ -1,13 +1,58 @@
-/**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Funcion con datos locales
+
  * la funcion con el signo ($) hace que sea mas facil el acceso a los html, sin necesidad de mucho codigo
- */
+
 
 $(function () {
     var operation = "C";
     var selected_index = -1;
     /**
      * Esta variable permite que los datos de la tabla no se borren
-     */
+   
     var tblHistorial = localStorage.getItem("tblHistorial");
     tblHistorial = JSON.parse(tblHistorial);
     if (tblHistorial === null)
@@ -78,7 +123,7 @@ var  comprobar=false;
     }
     /*si la operacion es C se llama el metodo Create haciendo que el boton guardarHistorial agregue un nuevo historial,
     * sino ese boton llama la función Edit y actualiza la informacion de la historial
-    */
+
     $("#guardarHistorial").bind("click", function () {
         if (operation === "C")
             return Create();
@@ -98,6 +143,6 @@ var  comprobar=false;
         $("#historialP").val(Histo.HistorialP);
         $("#ide").attr("readonly", "readonly");
     });
-});
+}); */
 
 

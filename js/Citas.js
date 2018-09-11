@@ -1,4 +1,29 @@
-$(function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*$(function () {
     var operation = "C";
     var selected_index = -1;
     var tblCitas = localStorage.getItem("tblCitas"); 
@@ -105,4 +130,4 @@ $(function () {
       List(); 
       location.reload();
     });
-  });
+  });*/
